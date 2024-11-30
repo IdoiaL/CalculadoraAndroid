@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/boton_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="94dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#9C27B0"
+        android:text="Resultado"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <ImageView
+        android:id="@+id/imagen_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cielo" />
+
+    <ImageView
+        android:id="@+id/imagen_estadistica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:src="@drawable/montanas" />
+
+</FrameLayout>
