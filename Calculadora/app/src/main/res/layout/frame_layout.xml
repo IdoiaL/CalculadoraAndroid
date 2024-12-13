@@ -1,55 +1,128 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/cielo"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/num1"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:paddingTop="100dp"
-        android:layout_gravity="top|center"
-        android:hint="Número 1" />
-
-    <EditText
-        android:id="@+id/num1_EditText"
-        android:layout_width="300dp"
-        android:layout_height="66dp"
-        android:layout_gravity="center"
-        android:hint="Texto de entrada" />
-
-    <Button
-        android:id="@+id/boton_suma"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="#9C27B0"
-        android:text="+"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
-
-    <Button
-        android:id="@+id/boton_resultado"
-        android:layout_width="216dp"
-        android:layout_height="90dp"
-        android:layout_gravity="center|bottom"
-        android:backgroundTint="#E91E63"
-        android:text="Resultado"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
-
-    <ImageView
-        android:id="@+id/imagen_background"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="801dp"
-        android:layout_gravity="top|center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/cielo" />
-
-    <ImageView
-        android:id="@+id/imagen_estadistica"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="16dp"
-        android:src="@drawable/montanas" />
+        android:padding="20dp"
+        android:text="Num 1"
+        android:textSize="20sp"
+        android:visibility="visible" />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe aquí el primer número"
+            android:padding="30dp"
+            android:textSize="30sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonSumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginVertical="30dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/color_boton1"
+            android:paddingVertical="20dp"
+            android:text="+"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/buttonRestar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/color_boton2"
+            android:paddingVertical="20dp"
+            android:text="-"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/buttonMultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/color_boton3"
+            android:paddingVertical="20dp"
+            android:text="x"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/buttonDividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/color_boton4"
+            android:paddingVertical="20dp"
+            android:text="÷"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Num 2"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe aquí el segundo número"
+            android:padding="30dp"
+            android:textSize="30sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Resultado"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="El resultado es..."
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:padding="30dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
